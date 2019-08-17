@@ -128,15 +128,10 @@ class Explorer:
 
 scanner = Explorer()
 
-testVar1 = None
-testVar2 = list()
-
 def runProgram():
     global currentDir
     global dataPaths
     global data
-    global testVar1
-    global testVar2
 
     while True:
         print("\nCurrently in " + currentDir, end="\n\n")
@@ -182,13 +177,11 @@ def runProgram():
             scanner.scanPaths(currentDir, "deep")
             picturePaths = []  # clear data
             files = scanner.returnData("return", "files")
-            testVar1 = files
             for i in files:
                 if i.lower().endswith(".jpg") or\
                    i.lower().endswith(".jpeg") or\
                    i.lower().endswith("gif"):
                     picturePaths.append(i)
-                    testVar2.append(i)
             window = TileViewerGUI.Canvas(picturePaths)
             window.drawImages()
             window.mainLoop()

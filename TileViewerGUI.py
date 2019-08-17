@@ -2,16 +2,6 @@ import tkinter as tk
 
 import ImageHandler
 
-#import os
-#picturePaths = []  # clear data
-#directory = "/Users/keithlee/Documents/Python/Photos"
-#files = os.listdir(directory)
-#for i in files:
-#    if i.lower().endswith(".jpg") or\
-#       i.lower().endswith(".jpeg") or\
-#       i.lower().endswith("gif"):
-#        picturePaths.append(os.path.join(directory, i))
-
 
 class Canvas():
 
@@ -61,7 +51,3 @@ class Canvas():
         self.root.bind("<Up>", self.refresh)
         self.root.mainloop()
 
-
-#testCanvas = Canvas(picturePaths)
-#testCanvas.drawImages()
-#testCanvas.mainLoop()
