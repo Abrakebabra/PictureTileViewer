@@ -5,7 +5,6 @@ import TileViewerGUI
 
 currentDir = os.getcwd()
 dataPaths = list()
-data = list()
 picturePaths = list()
 
 
@@ -131,7 +130,6 @@ scanner = Explorer()
 def runProgram():
     global currentDir
     global dataPaths
-    global data
 
     while True:
         print("\nCurrently in " + currentDir, end="\n\n")
