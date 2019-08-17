@@ -127,6 +127,7 @@ class Explorer:
 
 scanner = Explorer()
 
+
 def runProgram():
     global currentDir
     global dataPaths
@@ -134,7 +135,7 @@ def runProgram():
 
     while True:
         print("\nCurrently in " + currentDir, end="\n\n")
-        print("\nall, folders, files, count, pictures, <folder name>, back, exit")
+        print("\nall, folders, files, count, pictures, <folder>, back, exit")
         userInput = input()
 
         if userInput == "exit":
@@ -184,6 +185,7 @@ def runProgram():
             window = TileViewerGUI.Canvas(picturePaths)
             window.drawImages()
             window.mainLoop()
+            del window
 
         else:
             if userInput in os.listdir(currentDir):
