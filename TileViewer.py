@@ -130,6 +130,7 @@ scanner = Explorer()
 def runProgram():
     global currentDir
     global dataPaths
+    global picturePaths
 
     while True:
         print("\nCurrently in " + currentDir, end="\n\n")
